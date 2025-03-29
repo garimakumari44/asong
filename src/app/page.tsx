@@ -1,6 +1,6 @@
 "use client"
 import Navbar from "./components/ui/navbar";
-import Hero from "./components/ui/hero/page";
+import Hero from "./components/ui/hero/Hero";
 import SectionOne from "./components/ui/section1";
 import SectionTwo from "./components/ui/section2";
 import Footer from "./components/ui/footer";
@@ -12,7 +12,7 @@ export default function Home() {
        
       <Navbar/>
       
-      <Hero value="Violin's playing and the angels crying  When the Stars aligning I'll be there "/>
+      <Hero text="Violin's playing and the angels crying  When the Stars aligning I'll be there "/>
       <SectionOne/>
       <SectionTwo/>
       <Footer/>

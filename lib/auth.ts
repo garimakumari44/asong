@@ -64,22 +64,26 @@ export const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET!,
   debug: process.env.NODE_ENV === 'development',
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-        token.email = user.email;
-        token.name = user.name;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (session.user) {
-        session.user.id = token.id as string;
-        session.user.email = token.email as string;
-        session.user.name = token.name as string | null;
-      }
-      return session;
+  // lib/auth.ts
+callbacks: {
+  async jwt({ token, user }) {
+    if (user) {
+      token.id = user.id;
+      token.email = user.email;
+      token.name = user.name;
     }
+    return token;
+  },
+  async session({ session, token }) {
+    if (session.user) {
+      session.user = {
+        ...session.user,
+        id: token.id,
+        name: token.name,
+        email: token.email
+      };
+    }
+    return session;
   }
-};
+}
+  }

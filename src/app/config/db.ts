@@ -1,24 +1,40 @@
-import 'dotenv/config'
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-const cached = global.mongoose || {con: null , promise : null };
+// Type definition for global mongoose instance
+const globalForMongoose = globalThis as unknown as {
+  mongoose: {
+    con: typeof mongoose | null;
+    promise: Promise<typeof mongoose> | null;
+  };
+};
 
-export default async  function connectedDB() {
+// Initialize or reuse existing connection
+const cached = globalForMongoose.mongoose || { con: null, promise: null };
 
-    if(cached.conn)  return cached.conn; 
-    if (!cached.promise) {
-        cached.promise =  (await mongoose.connect(process.env.MONGODB_URL)).
-        then((mongoose) => mongoose)
-    }
+export async function connectDB() {
+  if (cached.con) {
+    return cached.con;
+  }
 
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(process.env.MONGODB_URI!, {
+      bufferCommands: false,
+    });
+  }
 
-    try {
-          cached.conn = await cached.promise;
-    }  catch (error) {
-        console.error('error connnecting to  mongodb: ', error)
+  try {
+    cached.con = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
+  }
 
-    }
+  // Maintain the global instance in development
+  if (process.env.NODE_ENV !== 'production') {
+    globalForMongoose.mongoose = cached;
+  }
 
-    return cached.conn
-
+  return cached.con;
 }
+
+export const db = cached.con!; // Non-null assertion after successful connection

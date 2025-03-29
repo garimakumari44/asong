@@ -8,21 +8,26 @@ interface Message {
   content: string;
 }
 
-interface ApiResponse {
-  success: boolean;
-  data?: {
-    role: 'assistant';
-    content: string;
-  };
-  error?: string;
-}
+type ApiResponse = 
+  | {
+      success: true;
+      data: {
+        role: 'assistant';
+        content: string;
+      };
+    }
+  | {
+      success: false;
+      error: string;
+    };
 
 interface PromptBoxProps {
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
   prompts: Message[];
-  setPrompts: (prompts: Message[]) => void;
+  setPrompts: React.Dispatch<React.SetStateAction<Message[]>>;
 }
+
 
 const PromptBox = ({ 
   isLoading, 
@@ -78,14 +83,16 @@ const PromptBox = ({
 
       const data: ApiResponse = await response.json();
 
-      if (!data.success || !data.data?.content) {
-        throw new Error(data.error || 'No content in AI response');
-      }
+      // After getting response
+if (!data.success) {
+  throw new Error(data.error);
+}
 
-      setPrompts(prev => [
-        ...prev,
-        { role: 'assistant', content: data.data.content  },
-      ]);
+// TypeScript now knows data is success type here
+setPrompts(prev => [
+  ...prev,
+  { role: 'assistant', content: data.data.content }
+]);
     } catch (error) {
       console.error('API Error:', error);
       // Revert optimistic update on error
@@ -105,7 +112,7 @@ const PromptBox = ({
     <div className="w-full">
       <form
         onSubmit={sendMessages}
-        className={`w-full ${prompts.length > 1 ? 'max-w-3xl' : 'max-w-2xl'} bg-white/10 backdrop-blur-md drop-shadow-lg border-white border-2 rounded-3xl mt-4 transition-all shadow-2xs p-4`}
+        className={`w-full ${prompts.length > 1 ? 'lg:max-w-3xl' : 'lg:max-w-2xl'} bg-white/10 backdrop-blur-md drop-shadow-lg border-white border-2 rounded-3xl lg:mt-4 transition-all shadow-2xs p-4`}
       >
         <div className="flex items-end gap-2">
           <textarea
