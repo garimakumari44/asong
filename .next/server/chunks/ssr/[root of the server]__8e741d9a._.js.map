@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://G%3A/Asong/asong/src/app/context/AppContext.tsx"],"sourcesContent":["\"use client\"\r\nimport { useContext, createContext } from \"react\"\r\nimport { useUser } from \"@clerk/nextjs\"\r\nimport { ReactNode } from \"react\"\r\n\r\ninterface AppContextValue {\r\n    user: ReturnType<typeof useUser>['user'];\r\n  }\r\nexport const AppContext  = createContext<AppContextValue | undefined>(undefined);\r\n\r\nexport const useAppContext  = () => {\r\n    return useContext(AppContext)\r\n}\r\n\r\nexport const  AppContextProvider = ({children}: { children: ReactNode }) => {\r\n    const {user} = useUser()\r\n\r\n    const value: AppContextValue = {\r\n        user\r\n      };\r\n    \r\n\r\n    return <AppContext.Provider value={value}> {children}</AppContext.Provider>\r\n}"],"names":[],"mappings":";;;;;;AACA;AACA;AAFA;;;;AAQO,MAAM,2BAAc,CAAA,GAAA,qMAAA,CAAA,gBAAa,AAAD,EAA+B;AAE/D,MAAM,gBAAiB;IAC1B,OAAO,CAAA,GAAA,qMAAA,CAAA,aAAU,AAAD,EAAE;AACtB;AAEO,MAAO,qBAAqB,CAAC,EAAC,QAAQ,EAA0B;IACnE,MAAM,EAAC,IAAI,EAAC,GAAG,CAAA,GAAA,4JAAA,CAAA,UAAO,AAAD;IAErB,MAAM,QAAyB;QAC3B;IACF;IAGF,qBAAO,8OAAC,WAAW,QAAQ;QAAC,OAAO;;YAAO;YAAE;;;;;;;AAChD","debugId":null}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://G%3A/Asong/asong/src/app/components/ui/navbar.tsx"],"sourcesContent":["\"use client\"\r\n\r\nimport Image from \"next/image\"\r\nimport React from \"react\"\r\n\r\n\r\n\r\nexport default function Navbar() {\r\n    return <div className=\"h-16 w-full sticky top-0 left-0  backdrop-blur-2xl  bg-purple-300\">\r\n        <div>\r\n           <Image alt=\"logo\" src={'/logo.png'} width={50} height={50}/> \r\n        </div>\r\n\r\n    </div>\r\n}"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAOe,SAAS;IACpB,qBAAO,6LAAC;QAAI,WAAU;kBAClB,cAAA,6LAAC;sBACE,cAAA,6LAAC,gIAAA,CAAA,UAAK;gBAAC,KAAI;gBAAO,KAAK;gBAAa,OAAO;gBAAI,QAAQ;;;;;;;;;;;;;;;;AAIlE;KAPwB","debugId":null}}]
+}

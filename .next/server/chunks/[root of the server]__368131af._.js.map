@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file://C%3A/asong/asong/src/app/api/auth/error/route.ts"],"sourcesContent":["// app/api/auth/error/route.ts\r\nimport { NextResponse } from 'next/server';\r\n\r\nexport async function GET(request: Request) {\r\n  const { searchParams } = new URL(request.url);\r\n  const error = searchParams.get('error') || 'Authentication failed';\r\n  \r\n  return NextResponse.json(\r\n    { error },\r\n    { status: 200, headers: { 'Content-Type': 'application/json' } }\r\n  );\r\n}"],"names":[],"mappings":"AAAA,8BAA8B;;;;AAC9B;;AAEO,eAAe,IAAI,OAAgB;IACxC,MAAM,EAAE,YAAY,EAAE,GAAG,IAAI,IAAI,QAAQ,GAAG;IAC5C,MAAM,QAAQ,aAAa,GAAG,CAAC,YAAY;IAE3C,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CACtB;QAAE;IAAM,GACR;QAAE,QAAQ;QAAK,SAAS;YAAE,gBAAgB;QAAmB;IAAE;AAEnE","debugId":null}}]
+}
