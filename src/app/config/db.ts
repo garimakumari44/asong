@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import mongoose from 'mongoose'
 
-let cached = global.mongoose || {con: null , promise : null };
+const cached = global.mongoose || {con: null , promise : null };
 
 export default async  function connectedDB() {
 

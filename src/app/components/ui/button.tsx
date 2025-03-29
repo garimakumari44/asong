@@ -2,7 +2,7 @@
 interface ButtonProps {
 
 
-    title: String,
+    title: string,
     size: 'sm'| "md"|"lg" ,
     color: "purple"| "white" | "black"
     width: "bold"| "medium"| "light"

@@ -1,6 +1,9 @@
+"use client"
+import { RefObject } from "react";
+
 interface InputProps {
     placeholder: string,
-    reference?: any
+    reference?: RefObject<HTMLInputElement>; 
 
 }
 

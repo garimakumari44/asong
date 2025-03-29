@@ -1,7 +1,5 @@
 
 'use client'
-import Image from "next/image"
-import { Arrow } from "../icon/arrow"
 
 export default function Message({role, content}: {role: string,content: string}) {
     return <div className="flex w-full ml-80 ">
