@@ -12,7 +12,7 @@ export default function Home() {
        
       <Navbar/>
       
-      <Hero value={"Violin's playing and the angels crying  When the Stars aligning I'll be there "}/>
+      <Hero value="Violin's playing and the angels crying  When the Stars aligning I'll be there "/>
       <SectionOne/>
       <SectionTwo/>
       <Footer/>
