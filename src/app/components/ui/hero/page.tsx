@@ -6,7 +6,7 @@ import React, {useRef, useEffect} from "react";
 import Link from "next/link";
 
 
-export default function Hero({value}) {
+export default function Hero({value}:{value: string}) {
 
      
 
