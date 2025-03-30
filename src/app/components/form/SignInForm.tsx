@@ -49,7 +49,7 @@ function SignInForm() {
       const result = await signIn('credentials', {
         email: values.email,
         password: values.password,
-        redirect: false,
+        
       })
 
       if (result?.error) {

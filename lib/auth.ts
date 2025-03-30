@@ -10,7 +10,7 @@ export const authOptions: NextAuthOptions = {
   adapter,
   pages: {
     signIn: '/sign-in',
-    error: '/auth/error',
+   
   },
   providers: [
     CredentialsProvider({
