@@ -49,7 +49,7 @@ function SignInForm() {
       const result = await signIn('credentials', {
         email: values.email,
         password: values.password,
-        
+        redirect: false,
       })
 
       if (result?.error) {
@@ -66,7 +66,7 @@ function SignInForm() {
         }
       } else {
         // Redirect on successful login
-        
+        router.refresh()
         router.push('/dashboard') // Change to your desired redirect path
       }
     } catch (err) {
