@@ -1,9 +1,9 @@
 {
   "/api/ai/route": "/api/ai",
-  "/api/auth/error/route": "/api/auth/error",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
-  "/api/user/route": "/api/user",
+  "/api/auth/error/route": "/api/auth/error",
   "/_not-found/page": "/_not-found",
+  "/api/user/route": "/api/user",
   "/(root)/dashboard/page": "/dashboard",
   "/page": "/",
   "/(auth)/sign-up/page": "/sign-up",
