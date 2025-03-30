@@ -32,7 +32,7 @@ import { HeroProps } from "../../../../../lib/heroprops";
         <Image src={"/logo.png"} width={300} alt="logo" height={300} />
       </motion.div>
 
-      <p ref={element} className="text-6xl flex  text-purple-800 max-w-full  mx-20 p-30 font-bold ">
+      <p ref={element} className="text-6xl flex flex-wrap  text-purple-800 max-w-full  mx-20 p-30 font-bold ">
         {words.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
@@ -74,7 +74,7 @@ interface WordProps {
 const Word: React.FC<WordProps> = ({ children, range, progress }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <motion.span className="flex p-2" style={{ opacity }}>
+    <motion.span className=" p-2" style={{ opacity }}>
       {children}
     </motion.span>
   );
