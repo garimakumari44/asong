@@ -3,7 +3,8 @@
     "builds": [
       {
         "src": "next.config.js",
-        "use": "@vercel/next"
+        "use": "@vercel/next",
+        "config": {"includeFiles": ["prisma/schema.prisma"]}
       }
     ],
     "routes": [
