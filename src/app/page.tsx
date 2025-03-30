@@ -7,7 +7,7 @@ import Footer from "./components/ui/footer";
 
 export default function Home() {
   return (
-    <div  className="w-full bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100  ">
+    <div  className=" bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100  ">
       
        
       <Navbar/>

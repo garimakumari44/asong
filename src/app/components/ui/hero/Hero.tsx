@@ -22,7 +22,7 @@ import { HeroProps } from "../../../../../lib/heroprops";
   }, [scrollYProgress]);
 
   return (
-    <div className="flex flex-col justify-center md:px-10 mx-2 lg:px-40 lg:mt-10">
+    <div className="flex flex-col  w-full justify-center md:px-10 mx-2 lg:px-40 lg:mt-10">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ import { HeroProps } from "../../../../../lib/heroprops";
         <Image src={"/logo.png"} width={300} alt="logo" height={300} />
       </motion.div>
 
-      <p ref={element} className="text-6xl text-purple-800 mt-50 font-bold px-50">
+      <p ref={element} className="text-6xl text-purple-800 max-w-screen mx-20 p-10 font-bold ">
         {words.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
