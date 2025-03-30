@@ -11,7 +11,7 @@ export default function Home() {
       
        
       <Navbar/>
-      <div className="p-20"> 
+      <div className="p-20 mx-50"> 
       <Hero text="Violin's playing and the angels crying  When the Stars aligning I'll be there "/>
       </div>
       <SectionOne/>
