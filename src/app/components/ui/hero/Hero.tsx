@@ -32,7 +32,7 @@ import { HeroProps } from "../../../../../lib/heroprops";
         <Image src={"/logo.png"} width={300} alt="logo" height={300} />
       </motion.div>
 
-      <p ref={element} className="text-6xl text-purple-800 mt-50 font-bold">
+      <p ref={element} className="text-6xl text-purple-800 mt-50 font-bold pr-50">
         {words.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
