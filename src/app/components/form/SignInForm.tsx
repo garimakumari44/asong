@@ -66,7 +66,7 @@ function SignInForm() {
         }
       } else {
         // Redirect on successful login
-        router.refresh()
+        
         router.push('/dashboard') // Change to your desired redirect path
       }
     } catch (err) {
