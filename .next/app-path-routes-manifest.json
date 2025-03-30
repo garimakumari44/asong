@@ -4,8 +4,8 @@
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/_not-found/page": "/_not-found",
   "/api/user/route": "/api/user",
-  "/page": "/",
   "/(root)/dashboard/page": "/dashboard",
-  "/(auth)/sign-up/page": "/sign-up",
-  "/(auth)/sign-in/page": "/sign-in"
+  "/page": "/",
+  "/(auth)/sign-in/page": "/sign-in",
+  "/(auth)/sign-up/page": "/sign-up"
 }
