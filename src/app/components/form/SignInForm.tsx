@@ -50,7 +50,7 @@ function SignInForm() {
         email: values.email,
         password: values.password,
         redirect: false,
-      })
+      }, { callbackUrl: "/dashboard" })
 
       if (result?.error) {
         // Handle specific error messages
