@@ -7,12 +7,28 @@
       "static/chunks/main-app-0e1ad98174a4d520.js",
       "static/chunks/app/_not-found/page-863ef86c7f809fbe.js"
     ],
+    "/layout": [
+      "static/chunks/webpack-27226988932640a1.js",
+      "static/chunks/4bd1b696-44c7c9751235bea5.js",
+      "static/chunks/684-9e31f0dfa7fdb4f6.js",
+      "static/chunks/main-app-0e1ad98174a4d520.js",
+      "static/css/2d3a9625bdca652b.css",
+      "static/chunks/568-f5ee00c3c985165e.js",
+      "static/chunks/app/layout-35bedee335883684.js"
+    ],
     "/api/ai/route": [
       "static/chunks/webpack-27226988932640a1.js",
       "static/chunks/4bd1b696-44c7c9751235bea5.js",
       "static/chunks/684-9e31f0dfa7fdb4f6.js",
       "static/chunks/main-app-0e1ad98174a4d520.js",
       "static/chunks/app/api/ai/route-de7fcdf5cd6d3d3c.js"
+    ],
+    "/api/user/route": [
+      "static/chunks/webpack-27226988932640a1.js",
+      "static/chunks/4bd1b696-44c7c9751235bea5.js",
+      "static/chunks/684-9e31f0dfa7fdb4f6.js",
+      "static/chunks/main-app-0e1ad98174a4d520.js",
+      "static/chunks/app/api/user/route-70b449b8e70f3891.js"
     ],
     "/api/auth/[...nextauth]/route": [
       "static/chunks/webpack-27226988932640a1.js",
@@ -28,22 +44,6 @@
       "static/chunks/main-app-0e1ad98174a4d520.js",
       "static/chunks/app/api/auth/error/route-36546bc4b0fade03.js"
     ],
-    "/api/user/route": [
-      "static/chunks/webpack-27226988932640a1.js",
-      "static/chunks/4bd1b696-44c7c9751235bea5.js",
-      "static/chunks/684-9e31f0dfa7fdb4f6.js",
-      "static/chunks/main-app-0e1ad98174a4d520.js",
-      "static/chunks/app/api/user/route-70b449b8e70f3891.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack-27226988932640a1.js",
-      "static/chunks/4bd1b696-44c7c9751235bea5.js",
-      "static/chunks/684-9e31f0dfa7fdb4f6.js",
-      "static/chunks/main-app-0e1ad98174a4d520.js",
-      "static/css/2d3a9625bdca652b.css",
-      "static/chunks/568-f5ee00c3c985165e.js",
-      "static/chunks/app/layout-35bedee335883684.js"
-    ],
     "/(root)/dashboard/page": [
       "static/chunks/webpack-27226988932640a1.js",
       "static/chunks/4bd1b696-44c7c9751235bea5.js",
@@ -51,7 +51,7 @@
       "static/chunks/main-app-0e1ad98174a4d520.js",
       "static/chunks/39-9e86dbd4d432534f.js",
       "static/chunks/568-f5ee00c3c985165e.js",
-      "static/chunks/app/(root)/dashboard/page-a8db194e0d462d89.js"
+      "static/chunks/app/(root)/dashboard/page-3d465fcda8eac173.js"
     ],
     "/page": [
       "static/chunks/webpack-27226988932640a1.js",
